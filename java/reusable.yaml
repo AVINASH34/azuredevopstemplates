@@ -31,5 +31,6 @@ steps:
     inputs:
       mavenPomFile: "pom.xml"
       goals: ${{ parameters.Goal }}
+      publishJUnitResults: yes
       jdkVersionOption: ${{ parameters.JDK }}
     
