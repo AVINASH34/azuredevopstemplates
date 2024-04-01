@@ -19,9 +19,8 @@ parameters:
   - name: os
     displayName: os to build
     type: string 
-    default: 'ubuntu-latest'
+    default: 'ubuntu-22.04'
     values:
-      - 'ubuntu-18.04'
       - 'ubuntu-20.04'
       - 'ubuntu-22.04'
 
