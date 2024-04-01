@@ -1,7 +1,7 @@
 --- 
 parameters:
   - name: Goal 
-    displayname: 'Maven Goal'
+    displayName: Maven Goal
     type: string 
     default: package 
     values:
@@ -9,7 +9,7 @@ parameters:
       - package
       - test 
   - name: JDK
-    displayname: 'java version'
+    displayName: java version
     type: string 
     default: '1.11'
     values:
@@ -17,7 +17,7 @@ parameters:
       - '1.11'
       - '1.17'
   - name: os
-    displayname: 'os to build'
+    displayName: os to build
     type: string 
     default: 'ubuntu-latest'
     values:
