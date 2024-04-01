@@ -1,0 +1,35 @@
+--- 
+parameters:
+  - name: Goal 
+    displayname: 'Maven Goal'
+    type: string 
+    default: package 
+    values:
+      - clean 
+      - package
+      - test 
+  - name: JDK
+    displayname: 'java version'
+    type: string 
+    default: '1.11'
+    values:
+      - '1.8'
+      - '1.11'
+      - '1.17'
+  - name: os
+    displayname: 'os to build'
+    type: string 
+    default: 'ubuntu-latest'
+    values:
+      - 'ubuntu-18.04'
+      - 'ubuntu-20.04'
+      - 'ubuntu-22.04'
+
+
+steps:
+  - task: Maven@3
+    inputs:
+      mavenPomFile: "pom.xml"
+      goals: ${{ parameters.Goal }}
+      jdkVersionOption: ${{ parameters.JDK }}
+    
